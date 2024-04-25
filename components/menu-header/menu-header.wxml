@@ -1,0 +1,30 @@
+<!--components/menu-header/menu-header.wxml-->
+<wxs src="/utils/format.wxs" module="fmt"></wxs>
+<view class="content">
+  <!-- 背景 -->
+  <image class="bg-image" src="{{songInfo.coverImgUrl}}" mode="aspectFill"/>
+  <view class="bg-cover"></view>
+  <!-- 内容 -->
+  <view class="album">
+    <image src="{{songInfo.coverImgUrl}}"  class="image"/>
+    <view class="info">
+      <view class="title">{{songInfo.name}}</view>
+      <view class="anthor">
+        <image src="{{songInfo.creator.avatarUrl}}" mode="aspectFill" class="avatar"/>
+        <text class="nackname">{{songInfo.creator.nickname}}</text>
+      </view>
+      <view class="desc">简介：{{songInfo.description}}</view>
+    </view>
+  </view>
+
+  <view class="operation">
+    <view class="favor item">
+      <image src="/assets/icon/like.png" mode="widthFix" class="icon"/>
+      <text class="text">{{fmt.formatCount(songInfo.subscribedCount)}}</text>
+    </view>
+    <view class="share item">
+      <image src="/assets/icon/share.png" mode="widthFix" class="icon"/>
+      <text class="text">分享</text>
+    </view>
+  </view>
+</view>

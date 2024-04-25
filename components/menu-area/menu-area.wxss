@@ -1,0 +1,16 @@
+/* components/menu-area/menu-area.wxss */
+/* 歌单 */
+.menu .list {
+  /* display: flex; */
+  margin-left: -24rpx;
+  white-space: nowrap;
+}
+.menu .list .item {
+  display: inline-block;
+  width: 220rpx;
+  /* flex-shrink: 0; */
+  margin-right: 20rpx;
+}
+.menu .list .item:first-child {
+  margin-left: 24rpx;
+}
